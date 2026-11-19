@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "slop-skill",
+  "version": "0.1.0",
+  "description": "Official marketplace catalog for slop-skill — calibrated AI slop engineering for web interfaces.",
+  "owner": {
+    "name": "seohuda",
+    "url": "https://github.com/seohuda"
+  },
+  "plugins": [
+    {
+      "name": "slop-skill",
+      "description": "Intentional AI slop design system with 5-level slop intensity calibration, deterministic generator CLI, and 30+ rule Slop Meter.",
+      "version": "0.1.0",
+      "source": "./",
+      "category": "design"
+    }
+  ]
+}

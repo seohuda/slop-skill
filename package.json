@@ -1,0 +1,37 @@
+{
+  "name": "slop-skill",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Intentional AI slop design system, deterministic CLI pipeline, and Claude Skill with 5-level intensity calibration.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "seohuda",
+    "url": "https://github.com/seohuda"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seohuda/slop-skill.git"
+  },
+  "homepage": "https://github.com/seohuda/slop-skill#readme",
+  "bugs": {
+    "url": "https://github.com/seohuda/slop-skill/issues"
+  },
+  "keywords": [
+    "ai-slop",
+    "design",
+    "frontend",
+    "claude-skill",
+    "agent-skills",
+    "satire"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "deal": "node skills/slop-skill/scripts/deal.mjs",
+    "assemble": "node skills/slop-skill/scripts/assemble.mjs",
+    "meter": "node skills/slop-skill/scripts/slop-meter.mjs"
+  }
+}

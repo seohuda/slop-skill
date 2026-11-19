@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaPulse AI (Fictional Demo) — Empower Every Workflow with Frictionless Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&amp;family=Inter:wght@400;500;600&amp;display=swap">
+  <style id="slop-system">
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--slop-bg);
+  color: var(--slop-fg);
+  font-family: var(--slop-font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--slop-font-heading);
+  line-height: 1.2;
+  margin-top: 0;
+  color: var(--slop-fg);
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--slop-surface);
+  border: 1px solid var(--slop-border);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--slop-accent1);
+  outline-offset: 3px;
+}
+
+.slop-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0.5rem;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  background-color: var(--slop-bg);
+  color: var(--slop-fg);
+  border: 2px solid var(--slop-accent1);
+  border-radius: 6px;
+}
+
+.slop-skip-link:focus {
+  left: 0.75rem;
+}
+
+.slop-container {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.slop-main {
+  position: relative;
+  z-index: 1;
+}
+
+.slop-section {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.slop-header {
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid var(--slop-border);
+  background-color: var(--slop-bg);
+}
+
+.slop-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+  padding-block: 1rem;
+}
+
+.slop-brand {
+  font-family: var(--slop-font-heading);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  color: var(--slop-fg);
+}
+
+.slop-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.slop-nav a {
+  font-size: 0.9375rem;
+  color: var(--slop-muted);
+  transition: color 0.2s ease;
+}
+
+.slop-nav a:hover {
+  color: var(--slop-fg);
+}
+
+.slop-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: var(--slop-accent1);
+  color: #ffffff;
+  border: 1px solid transparent;
+  transition: opacity 0.2s ease;
+}
+
+.slop-header-cta:hover {
+  opacity: 0.9;
+}
+
+.slop-footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--slop-border);
+  padding-block: 2.5rem;
+  color: var(--slop-muted);
+  font-size: 0.875rem;
+}
+
+.slop-footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.slop-copyright {
+  margin: 0;
+}
+
+.slop-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid var(--slop-border);
+  cursor: pointer;
+}
+
+.slop-btn-primary {
+  background-color: var(--slop-accent1);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.slop-btn-secondary {
+  background-color: var(--slop-surface);
+  color: var(--slop-fg);
+  border-color: var(--slop-border);
+}
+
+.slop-card {
+  background-color: var(--slop-surface);
+  border: 1px solid var(--slop-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.slop-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.slop-grid-2 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.slop-grid-3 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.slop-grid-4 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .slop-grid-3,
+  .slop-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .slop-header-inner {
+    justify-content: space-between;
+  }
+
+  .slop-nav {
+    order: 3;
+    width: 100%;
+    gap: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--slop-border);
+  }
+
+  .slop-grid-2,
+  .slop-grid-3,
+  .slop-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+  </style>
+  <style id="slop-tokens">
+:root {
+  --slop-bg: #F8FAFC;
+  --slop-fg: #0F172A;
+  --slop-accent1: #2563EB;
+  --slop-accent2: #0EA5E9;
+  --slop-surface: #FFFFFF;
+  --slop-muted: #475569;
+  --slop-border: #E2E8F0;
+  --slop-glow: rgba(37, 99, 235, 0.14);
+  --slop-gradient: linear-gradient(135deg, #F8FAFC, #EFF6FF);
+  --slop-font-heading: 'DM Sans', system-ui, sans-serif;
+  --slop-font-body: 'Inter', system-ui, sans-serif;
+}
+
+.slop-min-hero { padding: 5.5rem 1.5rem 4.5rem; text-align: center; box-sizing: border-box; }
+.slop-min-hero__inner { max-width: 760px; margin: 0 auto; }
+.slop-min-hero__title { margin: 0 0 1.25rem; font-family: var(--slop-font-heading); font-size: clamp(2rem, 4.2vw, 3.25rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--slop-fg); }
+.slop-min-hero__subhead { margin: 0 auto 2rem; max-width: 600px; font-family: var(--slop-font-body); font-size: 1.125rem; line-height: 1.65; color: var(--slop-muted); }
+.slop-min-hero__actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem; }
+.slop-min-hero__cta { display: inline-flex; align-items: center; justify-content: center; padding: 0.85rem 1.75rem; border-radius: 0.5rem; background: var(--slop-accent1); color: #ffffff; font-family: var(--slop-font-body); font-weight: 600; font-size: 1rem; text-decoration: none; transition: opacity 0.2s ease; }
+.slop-min-hero__cta:hover { opacity: 0.92; }
+
+.slop-clean-feat { padding: 3.5rem 1.5rem; box-sizing: border-box; }
+.slop-clean-feat__inner { max-width: 1120px; margin: 0 auto; }
+.slop-clean-feat__heading { margin: 0 0 2rem; text-align: center; font-family: var(--slop-font-heading); font-size: clamp(1.5rem, 2.8vw, 2.125rem); font-weight: 700; color: var(--slop-fg); }
+.slop-clean-feat__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1.5rem; }
+.slop-clean-feat__card { padding: 1.75rem; border-radius: 0.75rem; background: var(--slop-surface); border: 1px solid var(--slop-border); text-align: left; box-sizing: border-box; }
+.slop-clean-feat__index { display: inline-block; margin-bottom: 0.75rem; font-family: var(--slop-font-body); font-size: 0.8125rem; font-weight: 600; color: var(--slop-accent1); letter-spacing: 0.06em; }
+.slop-clean-feat__title { margin: 0 0 0.65rem; font-family: var(--slop-font-heading); font-size: 1.125rem; font-weight: 600; color: var(--slop-fg); }
+.slop-clean-feat__body { margin: 0; font-family: var(--slop-font-body); font-size: 0.95rem; line-height: 1.6; color: var(--slop-muted); }
+
+.slop-simple-cta { padding: 3.5rem 1.5rem 4.5rem; box-sizing: border-box; }
+.slop-simple-cta__box { max-width: 900px; margin: 0 auto; padding: 2.75rem 2rem; border-radius: 0.875rem; background: var(--slop-surface); border: 1px solid var(--slop-border); text-align: center; box-sizing: border-box; }
+.slop-simple-cta__title { margin: 0 0 0.75rem; font-family: var(--slop-font-heading); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: var(--slop-fg); }
+.slop-simple-cta__text { margin: 0 auto 1.75rem; max-width: 540px; font-family: var(--slop-font-body); font-size: 1rem; line-height: 1.6; color: var(--slop-muted); }
+.slop-simple-cta__btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.85rem 1.75rem; border-radius: 0.5rem; background: var(--slop-accent1); color: #ffffff; font-family: var(--slop-font-body); font-weight: 600; font-size: 0.975rem; text-decoration: none; transition: opacity 0.2s ease; }
+.slop-simple-cta__btn:hover { opacity: 0.92; }
+  </style>
+</head>
+<body data-slop-level="1" data-slop-page="landing">
+  <a class="slop-skip-link" href="#main-content">Skip to main content</a>
+  
+
+  <header class="slop-header">
+    <div class="slop-container slop-header-inner">
+      <a href="#" class="slop-brand">NovaPulse AI (Fictional Demo)</a>
+      <nav class="slop-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#stats">Metrics</a>
+        <a href="#testimonials">Stories</a>
+        <a href="#cta">Get Started</a>
+      </nav>
+      <a href="#cta" class="slop-header-cta">Claim Free Account</a>
+    </div>
+  </header>
+
+  <main id="main-content" class="slop-main">
+    <section class="slop-section slop-min-hero">
+  <div class="slop-min-hero__inner">
+    <h1 class="slop-min-hero__title">Empower Every Workflow with Frictionless Automation</h1>
+    <p class="slop-min-hero__subhead">Supercharge every project with blazing-fast cloud intelligence that effortlessly adapts to your evolving workflow.</p>
+    <div class="slop-min-hero__actions">
+      <a class="slop-min-hero__cta" href="#cta">Claim Free Account</a>
+    </div>
+  </div>
+</section>
+    <section class="slop-section slop-clean-feat" id="features">
+  <div class="slop-clean-feat__inner">
+    <h2 class="slop-clean-feat__heading">Core Capabilities</h2>
+    <div class="slop-clean-feat__grid">
+      <article class="slop-clean-feat__card">
+        <span class="slop-clean-feat__index">01</span>
+        <h3 class="slop-clean-feat__title">Autonomous Task Pipelines</h3>
+        <p class="slop-clean-feat__body">Structured tooling designed for predictable performance across your daily team operations.</p>
+      </article>
+      <article class="slop-clean-feat__card">
+        <span class="slop-clean-feat__index">02</span>
+        <h3 class="slop-clean-feat__title">Hyper-Personalized Dashboards</h3>
+        <p class="slop-clean-feat__body">Clear configuration defaults keep projects organized without unnecessary overhead.</p>
+      </article>
+      <article class="slop-clean-feat__card">
+        <span class="slop-clean-feat__index">03</span>
+        <h3 class="slop-clean-feat__title">Frictionless Team Collaboration</h3>
+        <p class="slop-clean-feat__body">Reliable visibility into progress so contributors stay aligned from kickoff to release.</p>
+      </article>
+    </div>
+  </div>
+</section>
+    
+    
+    <section class="slop-section slop-simple-cta" id="cta">
+  <div class="slop-simple-cta__box">
+    <h2 class="slop-simple-cta__title">Ready to start with NovaPulse AI (Fictional Demo)?</h2>
+    <p class="slop-simple-cta__text">Set up your workspace in minutes and bring clarity to every project.</p>
+    <a class="slop-simple-cta__btn" href="#top">Claim Free Account</a>
+  </div>
+</section>
+  </main>
+
+  <footer class="slop-footer">
+    <div class="slop-container slop-footer-inner">
+      <p class="slop-copyright">&copy; 2026 NovaPulse AI (Fictional Demo). All rights reserved.</p>
+      
+    </div>
+  </footer>
+</body>
+</html>

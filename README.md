@@ -92,12 +92,14 @@ Useful flags:
 Once installed, prompt your coding agent in Korean or English and specify your desired Slop Level (or let it default to Level 3):
 
 - **Korean triggers:**
-  - `"AI 슬롭 스타일로 SaaS 랜딩페이지 만들어줘"`
-  - `"레벨 5 풀슬롭으로 NovaFlow AI 대시보드 페이지 짜줘"`
-  - `"슬롭 레벨 1 정도로 깔끔한 템플릿 느낌 페이지 생성해줘"`
+  - `"AI slop 디자인을 만들어줘"`
+  - `"일부러 AI스럽게 만들어줘"`
+  - `"전형적인 AI 랜딩페이지 만들어줘"`
+  - `"슬롭 강도 5로 디자인해줘"`
+  - `"일부러 ChatGPT가 만든 것처럼 만들어줘"`
 - **English triggers:**
+  - `"Make this look like AI slop"`
   - `"Build a Level 4 AI slop landing page with purple neon and glassmorphism"`
-  - `"Generate a Peak Transcendent Slop (Level 5) SaaS waitlist page for QuantumSync"`
   - `"Audit index.html with the slop meter and raise it to at least 81"`
 
 ### Direct CLI Pipeline
@@ -189,15 +191,28 @@ skills/slop-skill/library/*.json   (palettes, fonts, copy, components)
 
 ## 8. Examples
 
-<!-- EXAMPLES_PLACEHOLDER -->
-Rendered Level 1 / Level 3 / Level 5 showcase HTML builds, verified Slop Meter scores, and screenshots are generated during the post-integration release pipeline.
+All three showcase pages below share the exact same fictional brand brief (**NovaPulse AI (Fictional Demo)**) and deterministic seed (`--seed 127`), generated directly with `deal.mjs` and `assemble.mjs` and audited with `slop-meter.mjs`. Screenshots were captured in headless Google Chrome (`1280×1500`).
 
-| Level | Label | Brand / Seed | Measured Slop Score | Grade | Preview |
-|---:|---|---|---:|---|---|
-| 1 | Subtle Slop | `TBD — generated in release pipeline` | `TBD` | `TBD` | `TBD` |
-| 3 | Classic AI | `TBD — generated in release pipeline` | `TBD` | `TBD` | `TBD` |
-| 5 | Peak Transcendent Slop | `TBD — generated in release pipeline` | `TBD` | `TBD` | `TBD` |
-<!-- /EXAMPLES_PLACEHOLDER -->
+| Level | Label | Palette | Font Pairing | Components | Animations | Measured Slop Score | Grade | HTML |
+|---:|---|---|---|---:|---|---:|---|---|
+| 1 | Subtle Slop | Slate Minimal | DM Sans / Inter | 3 | None | **19/100** (8/34 rules) | `Artisanal` | [examples/level-1/index.html](examples/level-1/index.html) |
+| 3 | Classic AI | Lavender Mist | Sora / Plus Jakarta Sans | 5 | `float` | **76/100** (26/34 rules) | `Full Slop` | [examples/level-3/index.html](examples/level-3/index.html) |
+| 5 | Peak Transcendent Slop | Aurora Violet | Syne / Plus Jakarta Sans | 9 | All 6 | **97/100** (33/34 rules) | `Transcendent` | [examples/level-5/index.html](examples/level-5/index.html) |
+
+### Visual Comparison (Level 1 → Level 3 → Level 5)
+
+| Level 1 — Subtle Slop (`19/100`, Artisanal) | Level 3 — Classic AI (`76/100`, Full Slop) | Level 5 — Peak Transcendent Slop (`97/100`, Transcendent) |
+|---|---|---|
+| [![Level 1 Preview](examples/level-1/preview.png)](examples/level-1/index.html) | [![Level 3 Preview](examples/level-3/preview.png)](examples/level-3/index.html) | [![Level 5 Preview](examples/level-5/preview.png)](examples/level-5/index.html) |
+
+Reproduce any showcase page locally:
+
+```bash
+node skills/slop-skill/scripts/deal.mjs --level 5 --seed 127 --page landing --brand "NovaPulse AI (Fictional Demo)" \
+  | node skills/slop-skill/scripts/assemble.mjs --deal - --output examples/level-5/index.html
+
+node skills/slop-skill/scripts/slop-meter.mjs examples/level-5/index.html --min 81
+```
 
 ---
 

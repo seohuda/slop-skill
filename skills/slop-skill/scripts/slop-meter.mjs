@@ -41,7 +41,7 @@ const PRIMARY_CTA_CLASS_RE = /\b(?:slop-)?(?:btn|button|cta)-primary\b/i;
 const SECONDARY_CTA_CLASS_RE = /\b(?:slop-)?(?:btn|button|cta)-(?:secondary|ghost|outline)\b/i;
 
 const CTA_GROUP_BLOCK_RE =
-  /<(div|nav|section|p)[^>]*class=["'][^"']*(?:cta-group|hero-actions|hero-cta|hero-buttons|btn-group|button-group|slop-actions|slop-cta-group)[^"']*["'][^>]*>[\s\S]*?<\/\1>/gi;
+  /<(div|nav|section|p)[^>]*class=["'][^"']*(?:cta-group|hero[-_]actions|hero__actions|cta__actions|hero-cta|hero-buttons|btn-group|button-group|slop-actions|slop-cta-group)[^"']*["'][^>]*>[\s\S]*?<\/\1>/gi;
 
 const HERO_SECTION_RE =
   /<(section|header)[^>]*class=["'][^"']*\b(?:slop-)?hero\b[^"']*["'][^>]*>[\s\S]*?<\/\1>/gi;

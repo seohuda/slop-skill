@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaPulse AI (Fictional Demo) — Empower Every Workflow with Frictionless Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=Syne:wght@600;700;800&amp;display=swap">
+  <style id="slop-system">
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--slop-bg);
+  color: var(--slop-fg);
+  font-family: var(--slop-font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--slop-font-heading);
+  line-height: 1.2;
+  margin-top: 0;
+  color: var(--slop-fg);
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--slop-surface);
+  border: 1px solid var(--slop-border);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--slop-accent1);
+  outline-offset: 3px;
+}
+
+.slop-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0.5rem;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  background-color: var(--slop-bg);
+  color: var(--slop-fg);
+  border: 2px solid var(--slop-accent1);
+  border-radius: 6px;
+}
+
+.slop-skip-link:focus {
+  left: 0.75rem;
+}
+
+.slop-container {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.slop-main {
+  position: relative;
+  z-index: 1;
+}
+
+.slop-section {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.slop-header {
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid var(--slop-border);
+  background-color: var(--slop-bg);
+}
+
+.slop-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+  padding-block: 1rem;
+}
+
+.slop-brand {
+  font-family: var(--slop-font-heading);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  color: var(--slop-fg);
+}
+
+.slop-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.slop-nav a {
+  font-size: 0.9375rem;
+  color: var(--slop-muted);
+  transition: color 0.2s ease;
+}
+
+.slop-nav a:hover {
+  color: var(--slop-fg);
+}
+
+.slop-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: var(--slop-accent1);
+  color: #ffffff;
+  border: 1px solid transparent;
+  transition: opacity 0.2s ease;
+}
+
+.slop-header-cta:hover {
+  opacity: 0.9;
+}
+
+.slop-footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--slop-border);
+  padding-block: 2.5rem;
+  color: var(--slop-muted);
+  font-size: 0.875rem;
+}
+
+.slop-footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.slop-copyright {
+  margin: 0;
+}
+
+.slop-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid var(--slop-border);
+  cursor: pointer;
+}
+
+.slop-btn-primary {
+  background-color: var(--slop-accent1);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.slop-btn-secondary {
+  background-color: var(--slop-surface);
+  color: var(--slop-fg);
+  border-color: var(--slop-border);
+}
+
+.slop-card {
+  background-color: var(--slop-surface);
+  border: 1px solid var(--slop-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.slop-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.slop-grid-2 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.slop-grid-3 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.slop-grid-4 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .slop-grid-3,
+  .slop-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .slop-header-inner {
+    justify-content: space-between;
+  }
+
+  .slop-nav {
+    order: 3;
+    width: 100%;
+    gap: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--slop-border);
+  }
+
+  .slop-grid-2,
+  .slop-grid-3,
+  .slop-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+  </style>
+  <style id="slop-tokens">
+:root {
+  --slop-bg: #0B0719;
+  --slop-fg: #F5F3FF;
+  --slop-accent1: #7C3AED;
+  --slop-accent2: #06B6D4;
+  --slop-surface: rgba(255, 255, 255, 0.06);
+  --slop-muted: #C4B5FD;
+  --slop-border: rgba(124, 58, 237, 0.36);
+  --slop-glow: rgba(124, 58, 237, 0.52);
+  --slop-gradient: linear-gradient(135deg, #7C3AED, #06B6D4);
+  --slop-font-heading: 'Syne', system-ui, sans-serif;
+  --slop-font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.slop-grad-hero { position: relative; padding: 6.5rem 1.5rem 5rem; text-align: center; box-sizing: border-box; }
+.slop-grad-hero__inner { max-width: 920px; margin: 0 auto; }
+.slop-grad-hero__badge { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1.75rem; padding: 0.45rem 1.15rem; border-radius: 9999px; background: var(--slop-surface); border: 1px solid var(--slop-border); color: var(--slop-fg); font-family: var(--slop-font-body); font-size: 0.875rem; font-weight: 600; box-shadow: 0 0 24px var(--slop-glow); }
+.slop-grad-hero__title { margin: 0 0 1.5rem; font-family: var(--slop-font-heading); font-size: clamp(2.75rem, 6vw, 4.75rem); font-weight: 800; line-height: 1.06; letter-spacing: -0.04em; background: linear-gradient(135deg, var(--slop-fg) 0%, var(--slop-accent1) 50%, var(--slop-accent2) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.slop-grad-hero__subhead { margin: 0 auto 2.5rem; max-width: 680px; font-family: var(--slop-font-body); font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.65; color: var(--slop-muted); }
+.slop-grad-hero__actions { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.slop-grad-hero__primary { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2.15rem; border-radius: 0.85rem; background: var(--slop-gradient); color: #ffffff; font-family: var(--slop-font-body); font-weight: 700; font-size: 1.025rem; text-decoration: none; box-shadow: 0 0 28px var(--slop-glow); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.slop-grad-hero__primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 0 40px var(--slop-glow); }
+.slop-grad-hero__secondary { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2.15rem; border-radius: 0.85rem; background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: var(--slop-fg); border: 1px solid var(--slop-border); font-family: var(--slop-font-body); font-weight: 600; font-size: 1.025rem; text-decoration: none; transition: transform 0.25s ease, border-color 0.25s ease; }
+.slop-grad-hero__secondary:hover { transform: translateY(-3px); border-color: var(--slop-accent1); }
+
+.slop-heavy-feat { padding: 4rem 1.5rem; box-sizing: border-box; }
+.slop-heavy-feat__inner { max-width: 1120px; margin: 0 auto; }
+.slop-heavy-feat__heading { margin: 0 0 2.5rem; text-align: center; font-family: var(--slop-font-heading); font-size: clamp(1.75rem, 3.2vw, 2.4rem); font-weight: 800; color: var(--slop-fg); }
+.slop-heavy-feat__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1.75rem; }
+.slop-heavy-feat__card { padding: 2.15rem; border-radius: 1.35rem; background: var(--slop-surface); border: 1px solid var(--slop-border); box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45), 0 0 28px var(--slop-glow), inset 0 1px 0 rgba(255, 255, 255, 0.16); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; box-sizing: border-box; }
+.slop-heavy-feat__card:hover { transform: scale(1.05) translateY(-4px); border-color: var(--slop-accent1); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), 0 0 42px var(--slop-glow), inset 0 1px 0 rgba(255, 255, 255, 0.24); }
+.slop-heavy-feat__pill { display: inline-flex; align-items: center; gap: 0.35rem; margin-bottom: 1.1rem; padding: 0.35rem 0.85rem; border-radius: 9999px; background: var(--slop-gradient); color: #ffffff; font-family: var(--slop-font-body); font-size: 0.8rem; font-weight: 700; box-shadow: 0 0 18px var(--slop-glow); }
+.slop-heavy-feat__title { margin: 0 0 0.7rem; font-family: var(--slop-font-heading); font-size: 1.25rem; font-weight: 700; color: var(--slop-fg); }
+.slop-heavy-feat__body { margin: 0; font-family: var(--slop-font-body); font-size: 0.96rem; line-height: 1.65; color: var(--slop-muted); }
+
+.slop-glass-feat { padding: 4rem 1.5rem; box-sizing: border-box; }
+.slop-glass-feat__inner { max-width: 1120px; margin: 0 auto; }
+.slop-glass-feat__heading { margin: 0 0 2.25rem; text-align: center; font-family: var(--slop-font-heading); font-size: clamp(1.75rem, 3.2vw, 2.35rem); font-weight: 800; color: var(--slop-fg); }
+.slop-glass-feat__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1.5rem; }
+.slop-glass-feat__card { padding: 2rem; border-radius: 1.25rem; background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--slop-border); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 16px 36px rgba(0, 0, 0, 0.22); transition: transform 0.3s ease, border-color 0.3s ease; box-sizing: border-box; }
+.slop-glass-feat__card:hover { transform: translateY(-5px); border-color: var(--slop-accent1); }
+.slop-glass-feat__badge { display: inline-flex; align-items: center; gap: 0.35rem; margin-bottom: 1rem; padding: 0.35rem 0.75rem; border-radius: 9999px; background: rgba(139, 92, 246, 0.16); border: 1px solid var(--slop-border); font-family: var(--slop-font-body); font-size: 0.8rem; font-weight: 600; color: var(--slop-fg); }
+.slop-glass-feat__title { margin: 0 0 0.65rem; font-family: var(--slop-font-heading); font-size: 1.2rem; font-weight: 700; color: var(--slop-fg); }
+.slop-glass-feat__body { margin: 0; font-family: var(--slop-font-body); font-size: 0.96rem; line-height: 1.65; color: var(--slop-muted); }
+
+.slop-emoji-feat { padding: 4rem 1.5rem; box-sizing: border-box; }
+.slop-emoji-feat__inner { max-width: 1120px; margin: 0 auto; text-align: center; }
+.slop-emoji-feat__heading { margin: 0 0 0.75rem; font-family: var(--slop-font-heading); font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 800; letter-spacing: -0.025em; color: var(--slop-fg); }
+.slop-emoji-feat__lead { margin: 0 auto 2.5rem; max-width: 600px; font-family: var(--slop-font-body); font-size: 1.05rem; color: var(--slop-muted); }
+.slop-emoji-feat__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1.5rem; }
+.slop-emoji-feat__card { padding: 2rem; border-radius: 1.15rem; background: var(--slop-surface); border: 1px solid var(--slop-border); text-align: left; transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease; box-sizing: border-box; }
+.slop-emoji-feat__card:hover { transform: translateY(-6px); border-color: var(--slop-accent1); box-shadow: 0 18px 36px var(--slop-glow); }
+.slop-emoji-feat__icon { width: 3.25rem; height: 3.25rem; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; border-radius: 0.85rem; background: var(--slop-gradient); font-size: 1.5rem; box-shadow: 0 8px 20px var(--slop-glow); }
+.slop-emoji-feat__title { margin: 0 0 0.65rem; font-family: var(--slop-font-heading); font-size: 1.2rem; font-weight: 700; color: var(--slop-fg); }
+.slop-emoji-feat__body { margin: 0; font-family: var(--slop-font-body); font-size: 0.96rem; line-height: 1.6; color: var(--slop-muted); }
+
+.slop-stats { padding: 3.5rem 1.5rem; box-sizing: border-box; }
+.slop-stats__inner { max-width: 1120px; margin: 0 auto; padding: 2.25rem 1.75rem; border-radius: 1.25rem; background: var(--slop-surface); border: 1px solid var(--slop-border); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-sizing: border-box; }
+.slop-stats__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 1.5rem; text-align: center; }
+.slop-stats__item { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; padding: 0.5rem; }
+.slop-stats__value { font-family: var(--slop-font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; background: var(--slop-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.slop-stats__label { font-family: var(--slop-font-body); font-size: 0.925rem; font-weight: 500; color: var(--slop-muted); }
+
+.slop-testimonials { padding: 4rem 1.5rem; box-sizing: border-box; }
+.slop-testimonials__inner { max-width: 1120px; margin: 0 auto; }
+.slop-testimonials__heading { margin: 0 0 2.5rem; text-align: center; font-family: var(--slop-font-heading); font-size: clamp(1.75rem, 3.2vw, 2.35rem); font-weight: 800; color: var(--slop-fg); }
+.slop-testimonials__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1.5rem; }
+.slop-testimonials__card { margin: 0; padding: 2rem; border-radius: 1.15rem; background: var(--slop-surface); border: 1px solid var(--slop-border); display: flex; flex-direction: column; justify-content: space-between; gap: 1.25rem; box-sizing: border-box; }
+.slop-testimonials__stars { font-size: 1.15rem; letter-spacing: 0.14em; color: #facc15; }
+.slop-testimonials__quote { margin: 0; font-family: var(--slop-font-body); font-size: 0.98rem; line-height: 1.65; color: var(--slop-fg); }
+.slop-testimonials__meta { display: flex; flex-direction: column; gap: 0.2rem; }
+.slop-testimonials__author { font-family: var(--slop-font-heading); font-size: 1rem; font-weight: 700; color: var(--slop-fg); }
+.slop-testimonials__role { font-family: var(--slop-font-body); font-size: 0.875rem; color: var(--slop-muted); }
+
+.slop-neon-cta { padding: 4rem 1.5rem 5rem; box-sizing: border-box; }
+.slop-neon-cta__frame { max-width: 980px; margin: 0 auto; padding: 2px; border-radius: 1.5rem; background: var(--slop-gradient); box-shadow: 0 0 36px var(--slop-glow); box-sizing: border-box; }
+.slop-neon-cta__inner { padding: 3.5rem 2rem; border-radius: calc(1.5rem - 2px); background: var(--slop-bg); text-align: center; box-sizing: border-box; }
+.slop-neon-cta__title { margin: 0 0 1rem; font-family: var(--slop-font-heading); font-size: clamp(1.85rem, 3.8vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; background: var(--slop-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.slop-neon-cta__subhead { margin: 0 auto 2.25rem; max-width: 620px; font-family: var(--slop-font-body); font-size: 1.075rem; line-height: 1.65; color: var(--slop-muted); }
+.slop-neon-cta__actions { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.slop-neon-cta__primary { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2.25rem; border-radius: 0.85rem; background: var(--slop-gradient); color: #ffffff; font-family: var(--slop-font-body); font-weight: 700; font-size: 1.025rem; text-decoration: none; box-shadow: 0 0 28px var(--slop-glow); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.slop-neon-cta__primary:hover { transform: scale(1.05); box-shadow: 0 0 42px var(--slop-glow); }
+.slop-neon-cta__secondary { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; border-radius: 0.85rem; background: var(--slop-surface); border: 1px solid var(--slop-border); color: var(--slop-fg); font-family: var(--slop-font-body); font-weight: 600; font-size: 1rem; text-decoration: none; transition: transform 0.25s ease, border-color 0.25s ease; }
+.slop-neon-cta__secondary:hover { transform: scale(1.05); border-color: var(--slop-accent1); }
+
+.slop-decor { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.slop-decor__grid { position: absolute; inset: 0; background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px); background-size: 28px 28px; opacity: 0.28; }
+.slop-decor__sparkle { position: absolute; font-size: 1.35rem; color: var(--slop-accent1); text-shadow: 0 0 18px var(--slop-glow); opacity: 0.75; }
+.slop-decor__sparkle--1 { top: 14%; left: 10%; }
+.slop-decor__sparkle--2 { top: 24%; right: 12%; font-size: 1.5rem; }
+.slop-decor__sparkle--3 { bottom: 20%; left: 16%; color: var(--slop-accent2); }
+.slop-decor__orb { position: absolute; border-radius: 9999px; background: var(--slop-gradient); box-shadow: 0 0 24px var(--slop-glow); opacity: 0.55; }
+.slop-decor__orb--1 { width: 14px; height: 14px; top: 38%; left: 6%; }
+.slop-decor__orb--2 { width: 18px; height: 18px; bottom: 26%; right: 9%; }
+
+.slop-blobs { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.slop-blobs__orb { position: absolute; border-radius: 9999px; filter: blur(90px); opacity: 0.42; pointer-events: none; }
+.slop-blobs__orb--one { width: 460px; height: 460px; top: -120px; left: -110px; background: radial-gradient(circle, var(--slop-accent1) 0%, transparent 70%); }
+.slop-blobs__orb--two { width: 520px; height: 520px; top: 28%; right: -150px; background: radial-gradient(circle, var(--slop-accent2) 0%, transparent 70%); }
+.slop-blobs__orb--three { width: 420px; height: 420px; bottom: -140px; left: 32%; background: radial-gradient(circle, var(--slop-accent1) 0%, var(--slop-accent2) 45%, transparent 72%); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.slop-badge,
+.slop-float-item,
+.slop-emoji-icon,
+.slop-animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.72; transform: scale(1.03); }
+}
+.slop-badge,
+.slop-pulse-dot,
+.slop-animate-pulse {
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(28px, -24px) scale(1.08); }
+  66% { transform: translate(-22px, 18px) scale(0.95); }
+}
+.slop-blob,
+.slop-animate-blob {
+  animation: blob-drift 14s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.slop-gradient-text,
+.slop-btn-primary,
+.slop-animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+}
+
+.slop-card,
+.slop-glass-card,
+.slop-shadow-card,
+.slop-testimonial-card,
+.slop-btn {
+  transition: transform 0.3s ease;
+}
+.slop-card:hover,
+.slop-glass-card:hover,
+.slop-shadow-card:hover,
+.slop-testimonial-card:hover,
+.slop-btn:hover {
+  transform: scale(1.05) translateY(-4px);
+}
+
+@keyframes neon-glow-pulse {
+  0%, 100% { box-shadow: 0 0 18px var(--slop-glow), 0 0 36px var(--slop-glow); }
+  50% { box-shadow: 0 0 28px var(--slop-glow), 0 0 56px var(--slop-glow); }
+}
+.slop-btn-primary,
+.slop-neon-btn,
+.slop-animate-glow {
+  animation: neon-glow-pulse 3s ease-in-out infinite;
+}
+  </style>
+</head>
+<body data-slop-level="5" data-slop-page="landing">
+  <a class="slop-skip-link" href="#main-content">Skip to main content</a>
+  <div class="slop-decor" aria-hidden="true">
+  <div class="slop-decor__grid"></div>
+  <span class="slop-float-item slop-decor__sparkle slop-decor__sparkle--1">✦</span>
+  <span class="slop-float-item slop-decor__sparkle slop-decor__sparkle--2">✨</span>
+  <span class="slop-float-item slop-decor__sparkle slop-decor__sparkle--3">✦</span>
+  <span class="slop-float-item slop-decor__orb slop-decor__orb--1"></span>
+  <span class="slop-float-item slop-decor__orb slop-decor__orb--2"></span>
+</div>
+<div class="slop-blobs" aria-hidden="true">
+  <div class="slop-blob slop-blobs__orb slop-blobs__orb--one"></div>
+  <div class="slop-blob slop-blobs__orb slop-blobs__orb--two"></div>
+  <div class="slop-blob slop-blobs__orb slop-blobs__orb--three"></div>
+</div>
+
+  <header class="slop-header">
+    <div class="slop-container slop-header-inner">
+      <a href="#" class="slop-brand">NovaPulse AI (Fictional Demo)</a>
+      <nav class="slop-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#stats">Metrics</a>
+        <a href="#testimonials">Stories</a>
+        <a href="#cta">Get Started</a>
+      </nav>
+      <a href="#cta" class="slop-header-cta">Unlock Early Access</a>
+    </div>
+  </header>
+
+  <main id="main-content" class="slop-main">
+    <section class="slop-section slop-hero slop-grad-hero">
+  <div class="slop-grad-hero__inner">
+    <div class="slop-grad-hero__badge slop-badge slop-float-item">✨ Powered by Next-Gen AI</div>
+    <h1 class="slop-grad-hero__title slop-gradient-text">Empower Every Workflow with Frictionless Automation</h1>
+    <p class="slop-grad-hero__subhead">Unlock the power of unified AI orchestration and turn complex bottlenecks into streamlined, repeatable wins.</p>
+    <div class="slop-grad-hero__actions">
+      <a class="slop-grad-hero__primary slop-btn slop-btn-primary slop-neon-btn" href="#cta">Unlock Early Access &rarr;</a>
+      <a class="slop-grad-hero__secondary slop-btn" href="#features">Launch Your Workspace</a>
+    </div>
+  </div>
+</section>
+    <section class="slop-section slop-heavy-feat">
+  <div class="slop-heavy-feat__inner">
+    <h2 class="slop-heavy-feat__heading">Built to Amplify Every Breakthrough</h2>
+    <div class="slop-heavy-feat__grid">
+      <article class="slop-heavy-feat__card slop-card">
+        <div class="slop-heavy-feat__pill">⚡ Featured</div>
+        <h3 class="slop-heavy-feat__title">Next-Gen Cloud Sync</h3>
+        <p class="slop-heavy-feat__body">Multi-layered autonomous workflows supercharge delivery with relentless precision and speed.</p>
+      </article>
+      <article class="slop-heavy-feat__card slop-card">
+        <div class="slop-heavy-feat__pill">🚀 Enterprise</div>
+        <h3 class="slop-heavy-feat__title">Intelligent Data Synthesis</h3>
+        <p class="slop-heavy-feat__body">Zero-friction orchestration unlocks exponential output across distributed cloud teams.</p>
+      </article>
+      <article class="slop-heavy-feat__card slop-card">
+        <div class="slop-heavy-feat__pill">💎 Next-Gen</div>
+        <h3 class="slop-heavy-feat__title">Hyper-Personalized Dashboards</h3>
+        <p class="slop-heavy-feat__body">Elevate your experience with intelligent automation engineered to scale beyond limits.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="slop-section slop-glass-feat">
+  <div class="slop-glass-feat__inner">
+    <h2 class="slop-glass-feat__heading">Engineered for Next-Gen Scale</h2>
+    <div class="slop-glass-feat__grid">
+      <article class="slop-glass-feat__card slop-card">
+        <span class="slop-glass-feat__badge">⚡ AI Core</span>
+        <h3 class="slop-glass-feat__title">Next-Gen Cloud Sync</h3>
+        <p class="slop-glass-feat__body">Frosted modular pipelines deliver blazing-fast orchestration with enterprise reliability.</p>
+      </article>
+      <article class="slop-glass-feat__card slop-card">
+        <span class="slop-glass-feat__badge">🚀 Cloud Sync</span>
+        <h3 class="slop-glass-feat__title">Intelligent Data Synthesis</h3>
+        <p class="slop-glass-feat__body">Real-time neural synchronization keeps distributed teams seamlessly aligned worldwide.</p>
+      </article>
+      <article class="slop-glass-feat__card slop-card">
+        <span class="slop-glass-feat__badge">💎 Hypergrowth</span>
+        <h3 class="slop-glass-feat__title">Hyper-Personalized Dashboards</h3>
+        <p class="slop-glass-feat__body">Predictive intelligence automatically optimizes workflows as demand scales exponentially.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="slop-section slop-emoji-feat" id="features">
+  <div class="slop-emoji-feat__inner">
+    <h2 class="slop-emoji-feat__heading">Supercharge Every Part of Your Workflow</h2>
+    <p class="slop-emoji-feat__lead">Everything modern teams need to unlock next-gen velocity seamlessly.</p>
+    <div class="slop-emoji-feat__grid">
+      <article class="slop-emoji-feat__card slop-card">
+        <div class="slop-emoji-feat__icon slop-emoji-icon" aria-hidden="true">⚡</div>
+        <h3 class="slop-emoji-feat__title">Next-Gen Cloud Sync</h3>
+        <p class="slop-emoji-feat__body">Effortlessly automate repetitive tasks and elevate your team output with intelligent precision.</p>
+      </article>
+      <article class="slop-emoji-feat__card slop-card">
+        <div class="slop-emoji-feat__icon slop-emoji-icon" aria-hidden="true">🚀</div>
+        <h3 class="slop-emoji-feat__title">Intelligent Data Synthesis</h3>
+        <p class="slop-emoji-feat__body">Seamlessly connect every workspace tool in seconds with zero friction or manual setup.</p>
+      </article>
+      <article class="slop-emoji-feat__card slop-card">
+        <div class="slop-emoji-feat__icon slop-emoji-icon" aria-hidden="true">💎</div>
+        <h3 class="slop-emoji-feat__title">Hyper-Personalized Dashboards</h3>
+        <p class="slop-emoji-feat__body">Unlock actionable AI-powered insights that take your daily productivity to the next level.</p>
+      </article>
+    </div>
+  </div>
+</section>
+    <section class="slop-section slop-stats" id="stats">
+  <div class="slop-stats__inner">
+    <div class="slop-stats__grid">
+      <div class="slop-stats__item">
+        <span class="slop-stats__value">&lt;50ms</span>
+        <span class="slop-stats__label">Global Edge Latency</span>
+      </div>
+      <div class="slop-stats__item">
+        <span class="slop-stats__value">150+</span>
+        <span class="slop-stats__label">Global Integrations</span>
+      </div>
+      <div class="slop-stats__item">
+        <span class="slop-stats__value">10x</span>
+        <span class="slop-stats__label">Faster Delivery</span>
+      </div>
+      <div class="slop-stats__item">
+        <span class="slop-stats__value">4.9/5</span>
+        <span class="slop-stats__label">Customer Rating</span>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="slop-section slop-testimonials" id="testimonials">
+  <div class="slop-testimonials__inner">
+    <h2 class="slop-testimonials__heading">Loved by Visionary Teams Worldwide</h2>
+    <div class="slop-testimonials__grid">
+      <blockquote class="slop-testimonials__card slop-card">
+        <div class="slop-testimonials__stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="slop-testimonials__quote">&ldquo;Hands down the smartest investment we made this year. It revolutionized cross-team collaboration and eliminated manual busywork.&rdquo;</p>
+        <footer class="slop-testimonials__meta">
+          <strong class="slop-testimonials__author">Liam O&#39;Connor</strong>
+          <span class="slop-testimonials__role">VP of Strategy, CloudPulse</span>
+        </footer>
+      </blockquote>
+      <blockquote class="slop-testimonials__card slop-card">
+        <div class="slop-testimonials__stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="slop-testimonials__quote">&ldquo;I cannot imagine going back to legacy tools. This next-gen workspace supercharged our creative pipeline and cut turnaround times in half.&rdquo;</p>
+        <footer class="slop-testimonials__meta">
+          <strong class="slop-testimonials__author">Maya Brooks</strong>
+          <span class="slop-testimonials__role">VP of Design, Aura Digital</span>
+        </footer>
+      </blockquote>
+      <blockquote class="slop-testimonials__card slop-card">
+        <div class="slop-testimonials__stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="slop-testimonials__quote">&ldquo;From onboarding to global deployment, every detail feels effortlessly polished. It took our operational efficiency to the next level.&rdquo;</p>
+        <footer class="slop-testimonials__meta">
+          <strong class="slop-testimonials__author">Priya Nair</strong>
+          <span class="slop-testimonials__role">SVP of Operations, VelocityAI</span>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+    <section class="slop-section slop-neon-cta" id="cta">
+  <div class="slop-neon-cta__frame">
+    <div class="slop-neon-cta__inner">
+      <h2 class="slop-neon-cta__title slop-gradient-text">Unlock the Full Power of NovaPulse AI (Fictional Demo)</h2>
+      <p class="slop-neon-cta__subhead">Unlock the power of unified AI orchestration and turn complex bottlenecks into streamlined, repeatable wins.</p>
+      <div class="slop-neon-cta__actions">
+        <a class="slop-neon-cta__primary slop-btn slop-btn-primary slop-neon-btn" href="#top">Unlock Early Access &rarr;</a>
+        <a class="slop-neon-cta__secondary slop-btn" href="#features">Launch Your Workspace</a>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="slop-footer">
+    <div class="slop-container slop-footer-inner">
+      <p class="slop-copyright">&copy; 2026 NovaPulse AI (Fictional Demo). All rights reserved.</p>
+      
+    </div>
+  </footer>
+</body>
+</html>

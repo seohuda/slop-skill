@@ -1,0 +1,108 @@
+[
+  {
+    "id": "paper-slate",
+    "name": "Paper & Slate",
+    "category": "color",
+    "slop_weight": 2,
+    "min_level": 1,
+    "tokens": {
+      "bg": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "fg": "#0F172A",
+      "muted": "#475569",
+      "accent1": "#334155",
+      "accent2": "#64748B",
+      "border": "#E2E8F0"
+    },
+    "gradient": "linear-gradient(135deg, #F8FAFC, #E2E8F0)"
+  },
+  {
+    "id": "soft-mist",
+    "name": "Soft Mist",
+    "category": "color",
+    "slop_weight": 3,
+    "min_level": 1,
+    "tokens": {
+      "bg": "#FAF9F6",
+      "surface": "#FFFFFF",
+      "fg": "#1E293B",
+      "muted": "#64748B",
+      "accent1": "#4F46E5",
+      "accent2": "#6366F1",
+      "border": "#E5E7EB"
+    },
+    "gradient": "linear-gradient(135deg, #F1F5F9, #EEF2FF)"
+  },
+  {
+    "id": "indigo-saas",
+    "name": "Indigo SaaS",
+    "category": "color",
+    "slop_weight": 5,
+    "min_level": 2,
+    "tokens": {
+      "bg": "#F5F3FF",
+      "surface": "#FFFFFF",
+      "fg": "#1E1B4B",
+      "muted": "#4338CA",
+      "accent1": "#6366F1",
+      "accent2": "#8B5CF6",
+      "border": "#DDD6FE"
+    },
+    "gradient": "linear-gradient(135deg, #6366F1, #8B5CF6)"
+  },
+  {
+    "id": "purple-neon",
+    "name": "Purple Neon",
+    "category": "color",
+    "slop_weight": 8,
+    "min_level": 3,
+    "tokens": {
+      "bg": "#09051A",
+      "surface": "rgba(255, 255, 255, 0.06)",
+      "fg": "#FFFFFF",
+      "muted": "#A5B4FC",
+      "accent1": "#8B5CF6",
+      "accent2": "#3B82F6",
+      "border": "rgba(139, 92, 246, 0.35)",
+      "glow": "rgba(139, 92, 246, 0.55)"
+    },
+    "gradient": "linear-gradient(135deg, #8B5CF6, #3B82F6)"
+  },
+  {
+    "id": "cyber-violet",
+    "name": "Cyber Violet",
+    "category": "color",
+    "slop_weight": 9,
+    "min_level": 4,
+    "tokens": {
+      "bg": "#030712",
+      "surface": "rgba(15, 23, 42, 0.72)",
+      "fg": "#F8FAFC",
+      "muted": "#C4B5FD",
+      "accent1": "#A855F7",
+      "accent2": "#06B6D4",
+      "border": "rgba(168, 85, 247, 0.45)",
+      "glow": "rgba(168, 85, 247, 0.65)"
+    },
+    "gradient": "linear-gradient(135deg, #A855F7, #6366F1, #06B6D4)"
+  },
+  {
+    "id": "hyper-void",
+    "name": "Hyper Void Overdrive",
+    "category": "color",
+    "slop_weight": 10,
+    "min_level": 5,
+    "tokens": {
+      "bg": "#05010D",
+      "surface": "rgba(255, 255, 255, 0.08)",
+      "fg": "#FFFFFF",
+      "muted": "#E9D5FF",
+      "accent1": "#C026D3",
+      "accent2": "#38BDF8",
+      "accent3": "#8B5CF6",
+      "border": "rgba(192, 38, 211, 0.5)",
+      "glow": "rgba(192, 38, 211, 0.75)"
+    },
+    "gradient": "linear-gradient(135deg, #C026D3, #8B5CF6, #38BDF8)"
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "clean-hero",
+    "name": "Clean Centered Hero",
+    "category": "layout",
+    "slop_weight": 2,
+    "min_level": 1,
+    "slot": "hero",
+    "html": "<section class=\"slop-hero-clean\"><h1>{{hero_headline}}</h1><p>{{subhead}}</p><a class=\"btn-primary\" href=\"#\">{{primary_cta}}</a></section>",
+    "css": ".slop-hero-clean { text-align: center; padding: 4rem 1.5rem; }"
+  },
+  {
+    "id": "clean-features",
+    "name": "Clean Feature Grid",
+    "category": "layout",
+    "slop_weight": 2,
+    "min_level": 1,
+    "slot": "features",
+    "html": "<section class=\"slop-features-clean\"><article><h3>{{feature_0_title}}</h3></article><article><h3>{{feature_1_title}}</h3></article><article><h3>{{feature_2_title}}</h3></article></section>",
+    "css": ".slop-features-clean { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }"
+  },
+  {
+    "id": "clean-footer",
+    "name": "Minimal Footer",
+    "category": "layout",
+    "slop_weight": 1,
+    "min_level": 1,
+    "slot": "footer",
+    "html": "<div class=\"slop-footer-clean\"><p>{{brand}} &copy; 2026</p></div>",
+    "css": ".slop-footer-clean { text-align: center; padding: 2rem 1rem; opacity: 0.8; }"
+  },
+  {
+    "id": "minimal-cta",
+    "name": "Dual Action Banner",
+    "category": "layout",
+    "slop_weight": 3,
+    "min_level": 2,
+    "slot": "cta",
+    "html": "<section class=\"slop-cta-minimal\"><h2>Ready to start with {{brand}}?</h2><div><a href=\"#\">{{primary_cta}}</a><a href=\"#\">{{secondary_cta}}</a></div></section>",
+    "css": ".slop-cta-minimal { text-align: center; padding: 3rem 1.5rem; border-radius: 1rem; }"
+  },
+  {
+    "id": "saas-metrics",
+    "name": "Clean Metrics Row",
+    "category": "layout",
+    "slop_weight": 4,
+    "min_level": 2,
+    "slot": "stats",
+    "html": "<section class=\"slop-metrics\"><div><strong>{{stat_0_value}}</strong><span>{{stat_0_label}}</span></div><div><strong>{{stat_1_value}}</strong><span>{{stat_1_label}}</span></div></section>",
+    "css": ".slop-metrics { display: flex; justify-content: center; gap: 3rem; padding: 2rem 1rem; }"
+  },
+  {
+    "id": "gradient-hero",
+    "name": "Gradient Text Sparkle Hero",
+    "category": "effect",
+    "slop_weight": 7,
+    "min_level": 3,
+    "slot": "hero",
+    "html": "<section class=\"slop-hero-gradient\"><span class=\"slop-badge\">{{badge}}</span><h1 class=\"gradient-text\">{{hero_headline}}</h1><p>{{subhead}}</p><div class=\"actions\"><a href=\"#\">{{primary_cta}}</a><a href=\"#\">{{secondary_cta}}</a></div></section>",
+    "css": ".gradient-text { background: var(--slop-gradient); -webkit-background-clip: text; color: transparent; }"
+  },
+  {
+    "id": "emoji-feature-cards",
+    "name": "Emoji Glass Feature Cards",
+    "category": "layout",
+    "slop_weight": 7,
+    "min_level": 3,
+    "slot": "features",
+    "html": "<section class=\"slop-emoji-cards\"><article class=\"glass-card\"><span>{{feature_0_emoji}}</span><h3>{{feature_0_title}}</h3></article><article class=\"glass-card\"><span>{{feature_1_emoji}}</span><h3>{{feature_1_title}}</h3></article><article class=\"glass-card\"><span>{{feature_2_emoji}}</span><h3>{{feature_2_title}}</h3></article></section>",
+    "css": ".glass-card { backdrop-filter: blur(16px); border-radius: 1.25rem; padding: 2rem; }"
+  },
+  {
+    "id": "sparkle-cta",
+    "name": "Sparkle Gradient CTA",
+    "category": "effect",
+    "slop_weight": 6,
+    "min_level": 3,
+    "slot": "cta",
+    "html": "<section class=\"slop-sparkle-cta\"><h2>{{badge}}</h2><p>{{subhead}}</p><a class=\"cta-glow\" href=\"#\">{{primary_cta}}</a></section>",
+    "css": ".cta-glow { background: var(--slop-gradient); box-shadow: 0 0 24px var(--slop-glow); }"
+  },
+  {
+    "id": "glass-testimonials",
+    "name": "Five-Star Glass Testimonials",
+    "category": "copy",
+    "slop_weight": 8,
+    "min_level": 4,
+    "slot": "testimonials",
+    "html": "<section class=\"slop-testimonials\"><blockquote class=\"glass-card\"><div>★★★★★</div><p>{{testimonial_0_quote}}</p><cite>{{testimonial_0_author}} — {{testimonial_0_role}}</cite></blockquote><blockquote class=\"glass-card\"><div>★★★★★</div><p>{{testimonial_1_quote}}</p><cite>{{testimonial_1_author}} — {{testimonial_1_role}}</cite></blockquote></section>",
+    "css": ".slop-testimonials { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }"
+  },
+  {
+    "id": "neon-stats-bar",
+    "name": "Neon Fake Stats Bar",
+    "category": "copy",
+    "slop_weight": 8,
+    "min_level": 4,
+    "slot": "stats",
+    "html": "<section class=\"slop-neon-stats\"><div><strong>{{stat_0_value}}</strong><span>{{stat_0_label}}</span></div><div><strong>{{stat_1_value}}</strong><span>{{stat_1_label}}</span></div><div><strong>{{stat_2_value}}</strong><span>{{stat_2_label}}</span></div><div><strong>{{stat_3_value}}</strong><span>{{stat_3_label}}</span></div></section>",
+    "css": ".slop-neon-stats { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; box-shadow: 0 0 32px var(--slop-glow); }"
+  },
+  {
+    "id": "blob-background",
+    "name": "Blurred Neon Blob Backdrop",
+    "category": "effect",
+    "slop_weight": 9,
+    "min_level": 4,
+    "slot": "extra",
+    "html": "<div class=\"slop-blobs\" aria-hidden=\"true\"><div class=\"blob blob-1\"></div><div class=\"blob blob-2\"></div></div>",
+    "css": ".slop-blobs .blob { position: fixed; border-radius: 9999px; filter: blur(96px); opacity: 0.45; }"
+  },
+  {
+    "id": "transcendent-hero",
+    "name": "Transcendent Overdrive Hero",
+    "category": "effect",
+    "slop_weight": 10,
+    "min_level": 5,
+    "slot": "hero",
+    "html": "<section class=\"slop-hero-transcendent\"><span class=\"pill-glow\">{{badge}}</span><h1 class=\"gradient-text\">{{hero_headline}}</h1><p>{{subhead}}</p><div class=\"cta-row\"><a class=\"btn-neon\" href=\"#\">{{primary_cta}}</a><a class=\"btn-glass\" href=\"#\">{{secondary_cta}}</a></div></section>",
+    "css": ".btn-neon { background: var(--slop-gradient); box-shadow: 0 0 40px var(--slop-glow); }"
+  },
+  {
+    "id": "floating-decorations",
+    "name": "Floating Sparkle Decorations",
+    "category": "effect",
+    "slop_weight": 10,
+    "min_level": 5,
+    "slot": "extra",
+    "html": "<div class=\"slop-floating-sparkles\" aria-hidden=\"true\"><span>✨</span><span>🚀</span><span>💎</span></div>",
+    "css": ".slop-floating-sparkles { position: fixed; inset: 0; pointer-events: none; }"
+  },
+  {
+    "id": "neon-newsletter-cta",
+    "name": "Neon Newsletter Waitlist CTA",
+    "category": "layout",
+    "slop_weight": 9,
+    "min_level": 5,
+    "slot": "cta",
+    "html": "<section class=\"slop-newsletter\"><h2>Join {{brand}} Today</h2><form><input type=\"email\" placeholder=\"you@company.ai\" /><button type=\"submit\">{{primary_cta}}</button></form></section>",
+    "css": ".slop-newsletter { backdrop-filter: blur(20px); border: 1px solid var(--slop-border); border-radius: 1.5rem; padding: 3rem; }"
+  }
+]

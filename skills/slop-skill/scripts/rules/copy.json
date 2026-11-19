@@ -1,0 +1,78 @@
+[
+  {
+    "id": "copy-revolutionize",
+    "name": "Buzzword: Revolutionize",
+    "category": "copy",
+    "weight": 6,
+    "type": "regex",
+    "pattern": "\\brevolutioniz(?:e|es|ed|ing)\\b",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses the AI SaaS cliché verb 'revolutionize'"
+  },
+  {
+    "id": "copy-unlock-power",
+    "name": "Buzzword: Unlock the power of",
+    "category": "copy",
+    "weight": 6,
+    "type": "regex",
+    "pattern": "\\bunlock\\s+the\\s+power\\s+of\\b",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses the AI SaaS cliché phrase 'unlock the power of'"
+  },
+  {
+    "id": "copy-seamlessly",
+    "name": "Buzzword: Seamlessly",
+    "category": "copy",
+    "weight": 6,
+    "type": "regex",
+    "pattern": "\\bseamless(?:ly)?\\b",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses the ubiquitous AI cliché 'seamless' or 'seamlessly'"
+  },
+  {
+    "id": "copy-supercharge",
+    "name": "Buzzword: Supercharge",
+    "category": "copy",
+    "weight": 6,
+    "type": "regex",
+    "pattern": "\\bsupercharg(?:e|es|ing|ed)\\b",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses the hyperbolic cliché verb 'supercharge'"
+  },
+  {
+    "id": "copy-elevate",
+    "name": "Buzzword: Elevate your",
+    "category": "copy",
+    "weight": 5,
+    "type": "regex",
+    "pattern": "\\belevat(?:e|es|ed|ing)\\s+your\\b",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses the abstract SaaS marketing phrase 'elevate your'"
+  },
+  {
+    "id": "copy-next-level",
+    "name": "Buzzword: Next-level / Next-gen",
+    "category": "copy",
+    "weight": 6,
+    "type": "regex",
+    "pattern": "\\bnext[\\s-]level\\b|\\bnext[\\s-]gen(?:eration)?\\b",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses the clichés 'next-level' or 'next-gen'"
+  },
+  {
+    "id": "copy-buzzword-density",
+    "name": "High AI buzzword density",
+    "category": "copy",
+    "weight": 7,
+    "type": "computed",
+    "check": "buzzword-density",
+    "min": 4,
+    "description": "Saturates copy with 4 or more AI/SaaS marketing buzzwords"
+  }
+]

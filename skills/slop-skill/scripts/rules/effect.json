@@ -1,0 +1,78 @@
+[
+  {
+    "id": "glassmorphism",
+    "name": "Glassmorphism",
+    "category": "effect",
+    "weight": 9,
+    "type": "regex",
+    "pattern": "(?:(?:-webkit-)?backdrop-filter\\s*:\\s*blur\\(|\\bbackdrop-blur(?:-sm|-md|-lg|-xl|-2xl|-3xl)?\\b)",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses backdrop-filter blur glassmorphism surfaces"
+  },
+  {
+    "id": "float-animation",
+    "name": "Float animation",
+    "category": "effect",
+    "weight": 7,
+    "type": "regex",
+    "pattern": "(?:@keyframes\\s+[a-z0-9_-]*float[a-z0-9_-]*|animation(?:-name)?\\s*:[^;{}]*\\b[a-z0-9_-]*float[a-z0-9_-]*)",
+    "flags": "i",
+    "min": 1,
+    "description": "Applies continuous decorative float keyframe animations"
+  },
+  {
+    "id": "pulse-animation",
+    "name": "Pulse animation",
+    "category": "effect",
+    "weight": 6,
+    "type": "regex",
+    "pattern": "(?:@keyframes\\s+[a-z0-9_-]*pulse[a-z0-9_-]*|animation(?:-name)?\\s*:[^;{}]*\\b[a-z0-9_-]*pulse[a-z0-9_-]*|\\banimate-pulse\\b)",
+    "flags": "i",
+    "min": 1,
+    "description": "Applies ambient pulse keyframe animations to badges, dots, or glows"
+  },
+  {
+    "id": "blob-background",
+    "name": "Blurred blob background",
+    "category": "effect",
+    "weight": 8,
+    "type": "regex",
+    "pattern": "(?:filter\\s*:\\s*blur\\(\\s*(?:[4-9]\\d|[1-9]\\d{2,})px\\s*\\)|\\bslop-blob\\b|\\bblob-drift\\b|class=[\"'][^\"']*\\bblob\\b[^\"']*[\"'])",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses large heavily blurred ambient gradient blobs in the background"
+  },
+  {
+    "id": "excessive-shadows",
+    "name": "Excessive box shadows",
+    "category": "effect",
+    "weight": 6,
+    "type": "computed",
+    "check": "shadow-excess",
+    "min": 4,
+    "description": "Declares 4 or more non-empty box-shadow rules across the page"
+  },
+  {
+    "id": "hover-scale-105",
+    "name": "Hover scale(1.05)",
+    "category": "effect",
+    "weight": 6,
+    "type": "regex",
+    "pattern": "(?:scale\\(\\s*1\\.0[3-9]\\d*\\s*\\)|hover:scale-10[3-9])",
+    "flags": "i",
+    "min": 1,
+    "description": "Applies generic scale(1.05) hover magnification to cards or buttons"
+  },
+  {
+    "id": "background-decorations",
+    "name": "Background decorations",
+    "category": "effect",
+    "weight": 6,
+    "type": "regex",
+    "pattern": "(?:✦|radial-gradient\\([^)]*\\dpx\\s*,\\s*transparent|\\bslop-float-item\\b|\\bslop-decor\\b|\\bslop-sparkles?\\b|\\bgradient-shift\\b|\\bdot-grid\\b)",
+    "flags": "iu",
+    "min": 1,
+    "description": "Adds ambient ornaments like floating sparkles, dot grids, or animated gradient shifts"
+  }
+]

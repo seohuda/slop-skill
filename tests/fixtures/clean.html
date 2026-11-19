@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Notes — Harbor Press</title>
+  <style>
+    :root {
+      --paper: #FAF9F5;
+      --ink: #24211E;
+      --muted: #5C564F;
+      --rule: #DDD8CE;
+      --accent: #8C3B2B;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.7;
+    }
+
+    header,
+    main,
+    footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    header {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .site-kicker {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      line-height: 1.25;
+      margin: 0 0 0.75rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin: 2.25rem 0 0.75rem;
+    }
+
+    p {
+      margin: 0 0 1.2rem;
+    }
+
+    .entries {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .entry {
+      padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .entry-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+
+    a.read-link {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="site-kicker">Harbor Press · Quarterly Monograph</div>
+    <h1>Practical Field Notes on Archival Bookbinding</h1>
+    <p>
+      Documentation of sewn signatures, wheat-starch paste ratios, and linen thread tension
+      recorded at our Portland bindery between 2021 and 2026.
+    </p>
+    <a class="read-link" href="#catalog">Browse the print catalog</a>
+  </header>
+
+  <main>
+    <section id="catalog">
+      <h2>Recent Workshop Logs</h2>
+      <div class="entries">
+        <article class="entry">
+          <div class="entry-meta">Issue 14 · October 2026</div>
+          <h3>Measuring Paper Grain Direction Before Folding</h3>
+          <p>
+            Short-grain rag sheets crease cleanly along the spine without buckling when exposed
+            to seasonal studio humidity changes.
+          </p>
+        </article>
+        <article class="entry">
+          <div class="entry-meta">Issue 13 · July 2026</div>
+          <h3>Kettle Stitch Tension on Thick Signatures</h3>
+          <p>
+            Using waxed 18/3 unbleached linen thread keeps sixteen-page signatures square without
+            cutting into dampened cotton folds.
+          </p>
+        </article>
+        <article class="entry">
+          <div class="entry-meta">Issue 12 · April 2026</div>
+          <h3>Comparing Millboard Densities for Flat-Opening Journals</h3>
+          <p>
+            Two-millimeter greyboard paired with a hollow tube spine distributes hinge stress across
+            repeated daily reference use.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Harbor Press, 418 SE Alder St, Portland. Printed in small runs on acid-free paper.
+  </footer>
+</body>
+</html>

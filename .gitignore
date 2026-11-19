@@ -1,0 +1,24 @@
+# Private local orchestration & AI coordinator workspace
+.orca-private/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies & build output
+node_modules/
+out/
+dist/
+tmp/
+
+# Logs & runtime artifacts
+*.log
+npm-debug.log*
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/settings.json

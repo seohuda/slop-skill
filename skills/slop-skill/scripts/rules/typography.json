@@ -1,0 +1,67 @@
+[
+  {
+    "id": "generic-saas-font",
+    "name": "Generic SaaS font",
+    "category": "typography",
+    "weight": 5,
+    "type": "regex",
+    "pattern": "(?:font-family|--slop-font-(?:heading|body)|family=)[^;{}<>]*\\b(?:Inter|Poppins|Plus[\\s+]Jakarta[\\s+]Sans|Space[\\s+]Grotesk|DM[\\s+]Sans|Outfit|Sora|Manrope)\\b",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses default AI SaaS geometric fonts such as Inter, Poppins, Plus Jakarta Sans, or Space Grotesk"
+  },
+  {
+    "id": "gradient-text-headline",
+    "name": "Gradient text headline",
+    "category": "typography",
+    "weight": 8,
+    "type": "regex",
+    "pattern": "(?:(?:-webkit-)?background-clip\\s*:\\s*text[\\s\\S]{0,300}(?:-webkit-text-fill-color|color)\\s*:\\s*transparent|(?:-webkit-text-fill-color|color)\\s*:\\s*transparent[\\s\\S]{0,300}(?:-webkit-)?background-clip\\s*:\\s*text|\\bbg-clip-text\\s+text-transparent\\b|\\btext-transparent\\s+bg-clip-text\\b)",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses background-clip: text with transparent text fill for gradient headlines"
+  },
+  {
+    "id": "universal-centering",
+    "name": "Universal center alignment",
+    "category": "typography",
+    "weight": 5,
+    "type": "computed",
+    "check": "centering-bias",
+    "min": 3,
+    "description": "Applies text-align: center or justify-content: center 3 or more times"
+  },
+  {
+    "id": "oversized-display-h1",
+    "name": "Oversized display H1",
+    "category": "typography",
+    "weight": 5,
+    "type": "regex",
+    "pattern": "(?:font-size\\s*:\\s*(?:clamp\\(\\s*(?:[2-9](?:\\.\\d+)?rem|[3-9]\\dpx)|[3-9](?:\\.\\d+)?rem|[4-9]\\dpx|1\\d\\dpx)|\\btext-(?:5xl|6xl|7xl|8xl|9xl)\\b)",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses oversized hero display heading typography (clamp(2rem+), 3rem+, or 40px+)"
+  },
+  {
+    "id": "tight-display-tracking",
+    "name": "Tight display tracking",
+    "category": "typography",
+    "weight": 4,
+    "type": "regex",
+    "pattern": "(?:letter-spacing\\s*:\\s*-0?\\.0[2-6]\\d*em|\\btracking-tighter\\b)",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses tight negative letter-spacing (-0.02em to -0.06em) on display headings"
+  },
+  {
+    "id": "google-fonts-import",
+    "name": "Google Fonts import",
+    "category": "typography",
+    "weight": 3,
+    "type": "regex",
+    "pattern": "fonts\\.googleapis\\.com",
+    "flags": "i",
+    "min": 1,
+    "description": "Loads web fonts directly from Google Fonts"
+  }
+]

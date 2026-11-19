@@ -1,0 +1,76 @@
+[
+  {
+    "id": "centered-hero",
+    "name": "Centered hero section",
+    "category": "layout",
+    "weight": 6,
+    "type": "regex",
+    "pattern": "(?:\\.(?:slop-)?hero[^{]*\\{[^}]*(?:text-align\\s*:\\s*center|align-items\\s*:\\s*center|justify-content\\s*:\\s*center)|<(?:section|header|div)[^>]*class=[\"'][^\"']*(?:slop-hero|hero-centered|centered-hero|hero[^\"']*text-center)[^\"']*[\"']|<(?:section|header)[^>]*class=[\"'][^\"']*\\bhero\\b[^\"']*[\"'][^>]*style=[\"'][^\"']*text-align\\s*:\\s*center)",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses a canonical centered hero section layout"
+  },
+  {
+    "id": "sparkle-pill-badge",
+    "name": "Sparkle AI pill badge",
+    "category": "layout",
+    "weight": 7,
+    "type": "regex",
+    "pattern": "(?:<[^>]*class=[\"'][^\"']*(?:badge|pill|chip|eyebrow)[^\"']*[\"'][^>]*>[^<]*(?:✨|🚀|⚡|✦|Powered by|Next-Gen|v2\\.0|Introducing|AI)|(?:✨|🚀|⚡)\\s*(?:Introducing|Powered by|Next-Gen|New|v[0-9]+\\.[0-9]+|AI)|Powered by[^<]{0,30}\\bAI\\b)",
+    "flags": "iu",
+    "min": 1,
+    "description": "Displays an AI hype or sparkle pill badge above the hero headline"
+  },
+  {
+    "id": "dual-cta-buttons",
+    "name": "Dual CTA buttons",
+    "category": "layout",
+    "weight": 6,
+    "type": "computed",
+    "check": "dual-cta",
+    "description": "Pairs primary and secondary CTA buttons side by side in the hero or CTA group"
+  },
+  {
+    "id": "emoji-feature-cards",
+    "name": "Emoji feature cards",
+    "category": "layout",
+    "weight": 8,
+    "type": "computed",
+    "check": "emoji-card-density",
+    "min": 3,
+    "description": "Uses 3 or more classic SaaS emojis (🚀, ⚡, 🧠, ✨, etc.) inside page markup"
+  },
+  {
+    "id": "fake-statistics",
+    "name": "Fake statistics",
+    "category": "layout",
+    "weight": 8,
+    "type": "regex",
+    "pattern": "(?<!\\w)(?:10K\\+|50K\\+|100K\\+|250K\\+|500K\\+|1M\\+|10M\\+|100M\\+|500M\\+|1B\\+|99\\.9%|99\\.99%|4\\.9/5|5\\.0/5|10x|100x)(?!\\w)",
+    "flags": "i",
+    "min": 1,
+    "description": "Displays suspiciously round marketing statistics like 10K+, 99.9%, 500M+, or 4.9/5"
+  },
+  {
+    "id": "star-testimonials",
+    "name": "Five-star testimonials",
+    "category": "layout",
+    "weight": 7,
+    "type": "regex",
+    "pattern": "(?:★{4,5}|⭐{4,5}|(?:&#9733;|&starf;){4,5}|testimonial[\\s\\S]{0,400}(?:★|⭐|&#9733;))",
+    "flags": "iu",
+    "min": 1,
+    "description": "Includes five-star rating strips or star-rated testimonial cards"
+  },
+  {
+    "id": "newsletter-waitlist-box",
+    "name": "Newsletter / waitlist box",
+    "category": "layout",
+    "weight": 6,
+    "type": "regex",
+    "pattern": "(?:(?:newsletter|waitlist|subscribe|early[\\s-]access|stay\\s+(?:ahead|updated|in\\s+the\\s+loop)|join\\s+the\\s+(?:future|list|waitlist))[\\s\\S]{0,600}type=[\"']email[\"']|type=[\"']email[\"'][\\s\\S]{0,600}(?:newsletter|waitlist|subscribe|early[\\s-]access|updates|join))",
+    "flags": "i",
+    "min": 1,
+    "description": "Includes a formulaic newsletter or waitlist email subscription box"
+  }
+]

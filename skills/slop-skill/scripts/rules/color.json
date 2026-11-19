@@ -1,0 +1,74 @@
+[
+  {
+    "id": "purple-gradient",
+    "name": "Purple gradient",
+    "category": "color",
+    "weight": 8,
+    "type": "regex",
+    "pattern": "linear-gradient\\((?:[^();{}]|\\([^()]*\\))*(?:#8b5cf6|#7c3aed|#a855f7|#9333ea|#6366f1|#c084fc|#6d28d9|\\bpurple\\b|\\bviolet\\b|\\bindigo\\b|rgba?\\(\\s*(?:139|124|168|147|99|192)\\s*,)",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses a purple, indigo, or violet linear gradient"
+  },
+  {
+    "id": "purple-blue-combo",
+    "name": "Purple-blue neon combo",
+    "category": "color",
+    "weight": 7,
+    "type": "computed",
+    "check": "purple-blue-combo",
+    "description": "Co-occurrence of purple/violet and electric blue/cyan accents"
+  },
+  {
+    "id": "dark-void-bg",
+    "name": "Dark void background",
+    "category": "color",
+    "weight": 6,
+    "type": "regex",
+    "pattern": "(?:--(?:slop-)?bg|background(?:-color)?)\\s*:[^;{}]*(?:#[01][0-9a-f][01][0-9a-f][0-3][0-9a-f]\\b|#1e1b4b\\b|rgba?\\(\\s*(?:[0-9]|1[0-9]|2[0-4])\\s*,\\s*(?:[0-9]|1[0-9]|2[0-4])\\s*,\\s*(?:[0-9]|[1-4][0-9])\\b)|\\bbg-(?:slate-950|gray-950|zinc-950|neutral-950|\\[#0[0-9a-f]{5}\\])",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses a deep dark void navy or obsidian page background"
+  },
+  {
+    "id": "dark-purple-combo",
+    "name": "Dark void with purple accents",
+    "category": "color",
+    "weight": 8,
+    "type": "computed",
+    "check": "dark-purple-combo",
+    "description": "Pairs a dark void background with purple or violet accents"
+  },
+  {
+    "id": "neon-glow-shadow",
+    "name": "Neon glow shadow",
+    "category": "color",
+    "weight": 7,
+    "type": "regex",
+    "pattern": "(?:(?:box-shadow|drop-shadow|text-shadow)\\s*[:(][^;{}]*(?:rgba?\\(\\s*(?:139|168|124|99|59|236|6|147|192|217|56|34|167)\\s*,|var\\(--slop-glow\\)|#(?:8b5cf6|7c3aed|a855f7|9333ea|6366f1|3b82f6|ec4899|06b6d4|c084fc))|--slop-glow\\s*:[^;{}]*(?:rgba?\\(\\s*(?:139|168|124|99|59|236|6|147|192|217|56|34|167)\\s*,\\s*\\d+\\s*,\\s*\\d+\\s*(?:,\\s*(?:0?\\.[2-9]\\d*|1(?:\\.0+)?))?\\)|#(?:8b5cf6|7c3aed|a855f7|9333ea|6366f1|3b82f6|ec4899|06b6d4|c084fc)))",
+    "flags": "i",
+    "min": 1,
+    "description": "Applies colored neon glow via box-shadow, drop-shadow, or --slop-glow"
+  },
+  {
+    "id": "excessive-gradients",
+    "name": "Excessive gradient usage",
+    "category": "color",
+    "weight": 6,
+    "type": "computed",
+    "check": "gradient-density",
+    "min": 3,
+    "description": "Declares or invokes 3 or more CSS gradients across the page"
+  },
+  {
+    "id": "translucent-border",
+    "name": "Translucent glass border",
+    "category": "color",
+    "weight": 5,
+    "type": "regex",
+    "pattern": "rgba\\(\\s*(?:255\\s*,\\s*255\\s*,\\s*255\\s*,\\s*0?\\.[012]\\d*|139\\s*,\\s*92\\s*,\\s*246\\s*,\\s*0?\\.[1-5]\\d*|168\\s*,\\s*85\\s*,\\s*247\\s*,\\s*0?\\.[1-5]\\d*|99\\s*,\\s*102\\s*,\\s*241\\s*,\\s*0?\\.[1-5]\\d*)\\s*\\)",
+    "flags": "i",
+    "min": 1,
+    "description": "Uses translucent white or violet hairline borders typical of dark glass UIs"
+  }
+]

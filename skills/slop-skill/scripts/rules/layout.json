@@ -5,7 +5,7 @@
     "category": "layout",
     "weight": 6,
     "type": "regex",
-    "pattern": "(?:\\.(?:slop-)?hero[^{]*\\{[^}]*(?:text-align\\s*:\\s*center|align-items\\s*:\\s*center|justify-content\\s*:\\s*center)|<(?:section|header|div)[^>]*class=[\"'][^\"']*(?:slop-hero|hero-centered|centered-hero|hero[^\"']*text-center)[^\"']*[\"']|<(?:section|header)[^>]*class=[\"'][^\"']*\\bhero\\b[^\"']*[\"'][^>]*style=[\"'][^\"']*text-align\\s*:\\s*center)",
+    "pattern": "(?:\\.[a-z0-9_-]*hero[^{]*\\{[^}]*(?:text-align\\s*:\\s*center|align-items\\s*:\\s*center|justify-content\\s*:\\s*center)|<(?:section|header|div)[^>]*class=[\"'][^\"']*(?:slop-hero|hero-centered|centered-hero|hero[^\"']*text-center)[^\"']*[\"']|<(?:section|header)[^>]*class=[\"'][^\"']*\\bhero\\b[^\"']*[\"'][^>]*style=[\"'][^\"']*text-align\\s*:\\s*center)",
     "flags": "i",
     "min": 1,
     "description": "Uses a canonical centered hero section layout"

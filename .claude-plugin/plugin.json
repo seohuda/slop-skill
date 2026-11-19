@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "slop-skill",
+  "version": "0.1.0",
+  "description": "Intentional AI slop design system, deterministic CLI generator, and Slop Meter auditing tool with 5-level intensity calibration.",
+  "author": {
+    "name": "seohuda",
+    "url": "https://github.com/seohuda"
+  },
+  "homepage": "https://github.com/seohuda/slop-skill",
+  "repository": "https://github.com/seohuda/slop-skill",
+  "license": "MIT",
+  "keywords": [
+    "ai-slop",
+    "design",
+    "frontend",
+    "claude-skill",
+    "agent-skills",
+    "satire"
+  ]
+}

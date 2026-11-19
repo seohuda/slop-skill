@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{brand}} — {{hero_headline}}</title>
+  <!-- SLOT:head -->
+  <!-- SLOT:tokens -->
+</head>
+<body data-slop-level="{{level}}" data-slop-page="{{page}}">
+  <a class="slop-skip-link" href="#main-content">Skip to main content</a>
+  <!-- SLOT:extra -->
+
+  <header class="slop-header">
+    <div class="slop-container slop-header-inner">
+      <a href="#" class="slop-brand">{{brand}}</a>
+      <nav class="slop-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#stats">Metrics</a>
+        <a href="#testimonials">Stories</a>
+        <a href="#cta">Get Started</a>
+      </nav>
+      <a href="#cta" class="slop-header-cta">{{primary_cta}}</a>
+    </div>
+  </header>
+
+  <main id="main-content" class="slop-main">
+    <!-- SLOT:hero -->
+    <!-- SLOT:features -->
+    <!-- SLOT:stats -->
+    <!-- SLOT:testimonials -->
+    <!-- SLOT:cta -->
+  </main>
+
+  <footer class="slop-footer">
+    <div class="slop-container slop-footer-inner">
+      <p class="slop-copyright">&copy; 2026 {{brand}}. All rights reserved.</p>
+      <!-- SLOT:footer -->
+    </div>
+  </footer>
+</body>
+</html>

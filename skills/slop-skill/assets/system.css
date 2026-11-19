@@ -1,0 +1,280 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--slop-bg);
+  color: var(--slop-fg);
+  font-family: var(--slop-font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--slop-font-heading);
+  line-height: 1.2;
+  margin-top: 0;
+  color: var(--slop-fg);
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--slop-surface);
+  border: 1px solid var(--slop-border);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--slop-accent1);
+  outline-offset: 3px;
+}
+
+.slop-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0.5rem;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  background-color: var(--slop-bg);
+  color: var(--slop-fg);
+  border: 2px solid var(--slop-accent1);
+  border-radius: 6px;
+}
+
+.slop-skip-link:focus {
+  left: 0.75rem;
+}
+
+.slop-container {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.slop-main {
+  position: relative;
+  z-index: 1;
+}
+
+.slop-section {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.slop-header {
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid var(--slop-border);
+  background-color: var(--slop-bg);
+}
+
+.slop-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+  padding-block: 1rem;
+}
+
+.slop-brand {
+  font-family: var(--slop-font-heading);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  color: var(--slop-fg);
+}
+
+.slop-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.slop-nav a {
+  font-size: 0.9375rem;
+  color: var(--slop-muted);
+  transition: color 0.2s ease;
+}
+
+.slop-nav a:hover {
+  color: var(--slop-fg);
+}
+
+.slop-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: var(--slop-accent1);
+  color: #ffffff;
+  border: 1px solid transparent;
+  transition: opacity 0.2s ease;
+}
+
+.slop-header-cta:hover {
+  opacity: 0.9;
+}
+
+.slop-footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--slop-border);
+  padding-block: 2.5rem;
+  color: var(--slop-muted);
+  font-size: 0.875rem;
+}
+
+.slop-footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.slop-copyright {
+  margin: 0;
+}
+
+.slop-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid var(--slop-border);
+  cursor: pointer;
+}
+
+.slop-btn-primary {
+  background-color: var(--slop-accent1);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.slop-btn-secondary {
+  background-color: var(--slop-surface);
+  color: var(--slop-fg);
+  border-color: var(--slop-border);
+}
+
+.slop-card {
+  background-color: var(--slop-surface);
+  border: 1px solid var(--slop-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.slop-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.slop-grid-2 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.slop-grid-3 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.slop-grid-4 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .slop-grid-3,
+  .slop-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .slop-header-inner {
+    justify-content: space-between;
+  }
+
+  .slop-nav {
+    order: 3;
+    width: 100%;
+    gap: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--slop-border);
+  }
+
+  .slop-grid-2,
+  .slop-grid-3,
+  .slop-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

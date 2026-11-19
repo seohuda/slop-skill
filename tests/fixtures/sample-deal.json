@@ -1,0 +1,164 @@
+{
+  "seed": 42,
+  "level": 5,
+  "page": "landing",
+  "palette": {
+    "id": "purple-neon-void",
+    "name": "Purple Neon Void",
+    "category": "color",
+    "slop_weight": 10,
+    "min_level": 4,
+    "tokens": {
+      "bg": "#09051A",
+      "surface": "rgba(255, 255, 255, 0.06)",
+      "fg": "#FFFFFF",
+      "muted": "#A5B4FC",
+      "accent1": "#8B5CF6",
+      "accent2": "#3B82F6",
+      "accent3": "#EC4899",
+      "border": "rgba(139, 92, 246, 0.35)",
+      "glow": "rgba(139, 92, 246, 0.55)"
+    },
+    "gradient": "linear-gradient(135deg, #8B5CF6, #3B82F6, #EC4899)"
+  },
+  "font": {
+    "id": "inter-poppins",
+    "name": "Inter & Poppins",
+    "category": "typography",
+    "slop_weight": 7,
+    "min_level": 1,
+    "heading": "Poppins",
+    "body": "Inter",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+  },
+  "copy": {
+    "brand": "NovaFlow AI",
+    "badge": "✨ Powered by Next-Gen Autonomous AI",
+    "hero_headline": "Revolutionize Your Workflow with Next-Gen AI",
+    "subhead": "Unlock the power of autonomous intelligence and seamlessly elevate your experience to the next level.",
+    "primary_cta": "Get Started Free",
+    "secondary_cta": "Watch Demo",
+    "features": [
+      {
+        "emoji": "🚀",
+        "title": "Lightning-Fast AI Automation"
+      },
+      {
+        "emoji": "⚡",
+        "title": "Seamless Cloud Integration"
+      },
+      {
+        "emoji": "🧠",
+        "title": "Autonomous Smart Analytics"
+      }
+    ],
+    "stats": [
+      {
+        "value": "10K+",
+        "label": "Active Users"
+      },
+      {
+        "value": "99.9%",
+        "label": "Uptime SLA"
+      },
+      {
+        "value": "500M+",
+        "label": "Tasks Automated"
+      },
+      {
+        "value": "4.9/5",
+        "label": "Customer Rating"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "This platform completely revolutionized our workflow and supercharged our team's productivity 10x.",
+        "author": "Sarah Chen",
+        "role": "VP of Engineering, TechFlow",
+        "rating": 5
+      },
+      {
+        "quote": "Seamlessly integrated into our stack in minutes. It truly elevated our entire product experience.",
+        "author": "Marcus Vance",
+        "role": "CTO, HyperScale Cloud",
+        "rating": 5
+      },
+      {
+        "quote": "We unlocked the power of next-gen automation and took our engineering velocity to the next level.",
+        "author": "Elena Rostova",
+        "role": "Head of AI, QuantumOps",
+        "rating": 5
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "neon-blob-backdrop",
+      "name": "Blurred Neon Blob Backdrop",
+      "category": "effect",
+      "slop_weight": 9,
+      "min_level": 4,
+      "slot": "extra",
+      "html": "<div class=\"slop-blobs\" aria-hidden=\"true\"><div class=\"slop-blob slop-blob-1\"></div><div class=\"slop-blob slop-blob-2\"></div></div>",
+      "css": ".slop-blobs { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; } .slop-blob { position: absolute; width: 480px; height: 480px; border-radius: 50%; filter: blur(110px); opacity: 0.35; } .slop-blob-1 { top: -120px; left: -100px; background: var(--slop-accent1); } .slop-blob-2 { bottom: -140px; right: -100px; background: var(--slop-accent2); }"
+    },
+    {
+      "id": "gradient-hero-centered",
+      "name": "Centered Gradient AI Hero",
+      "category": "layout",
+      "slop_weight": 9,
+      "min_level": 3,
+      "slot": "hero",
+      "html": "<section class=\"slop-section slop-hero\"><div class=\"slop-container slop-hero-inner\"><span class=\"slop-badge\"><span class=\"slop-pulse-dot\" aria-hidden=\"true\"></span>{{badge}}</span><h1 class=\"slop-gradient-text slop-hero-title\">{{hero_headline}}</h1><p class=\"slop-hero-subhead\">{{subhead}}</p><div class=\"slop-hero-actions\"><a href=\"#cta\" class=\"slop-btn slop-btn-primary slop-neon-btn\">{{primary_cta}} &rarr;</a><a href=\"#features\" class=\"slop-btn slop-btn-secondary\">{{secondary_cta}}</a></div></div></section>",
+      "css": ".slop-hero { text-align: center; padding-block: clamp(4.5rem, 9vw, 7rem); } .slop-hero-inner { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; } .slop-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; border-radius: 999px; background: var(--slop-surface); border: 1px solid var(--slop-border); color: var(--slop-muted); font-size: 0.875rem; font-weight: 600; } .slop-pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--slop-accent1); } .slop-hero-title { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -0.04em; max-width: 18ch; margin: 0; } .slop-gradient-text { background: var(--slop-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; } .slop-hero-subhead { font-size: 1.15rem; color: var(--slop-muted); max-width: 58ch; margin: 0; } .slop-hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; } .slop-neon-btn { background: var(--slop-gradient); box-shadow: 0 0 24px var(--slop-glow); }"
+    },
+    {
+      "id": "glass-emoji-features",
+      "name": "Glassmorphism Emoji Feature Cards",
+      "category": "layout",
+      "slop_weight": 9,
+      "min_level": 3,
+      "slot": "features",
+      "html": "<section id=\"features\" class=\"slop-section slop-features\"><div class=\"slop-container\"><h2 class=\"slop-section-title slop-gradient-text\">Supercharge Every Workflow</h2><div class=\"slop-grid-3\"><article class=\"slop-glass-card\"><div class=\"slop-emoji-icon\">{{feature_0_emoji}}</div><h3>{{feature_0_title}}</h3><p>Effortlessly automate repetitive pipelines with zero manual overhead.</p></article><article class=\"slop-glass-card\"><div class=\"slop-emoji-icon\">{{feature_1_emoji}}</div><h3>{{feature_1_title}}</h3><p>Connect your existing tools and scale across clouds in seconds.</p></article><article class=\"slop-glass-card\"><div class=\"slop-emoji-icon\">{{feature_2_emoji}}</div><h3>{{feature_2_title}}</h3><p>Unlock real-time insights that elevate every strategic decision.</p></article></div></div></section>",
+      "css": ".slop-section-title { text-align: center; font-size: clamp(1.85rem, 3.5vw, 2.75rem); margin-bottom: 2.5rem; } .slop-glass-card { background: var(--slop-surface); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--slop-border); border-radius: 16px; padding: 2rem; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35), 0 0 24px var(--slop-glow); } .slop-emoji-icon { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: var(--slop-surface); border: 1px solid var(--slop-border); font-size: 1.5rem; margin-bottom: 1rem; }"
+    },
+    {
+      "id": "fake-stats-strip",
+      "name": "Glowing Metrics Strip",
+      "category": "layout",
+      "slop_weight": 8,
+      "min_level": 4,
+      "slot": "stats",
+      "html": "<section id=\"stats\" class=\"slop-section slop-stats\"><div class=\"slop-container\"><div class=\"slop-grid-4\"><div class=\"slop-stat-card\"><span class=\"slop-stat-value slop-gradient-text\">{{stat_0_value}}</span><span class=\"slop-stat-label\">{{stat_0_label}}</span></div><div class=\"slop-stat-card\"><span class=\"slop-stat-value slop-gradient-text\">{{stat_1_value}}</span><span class=\"slop-stat-label\">{{stat_1_label}}</span></div><div class=\"slop-stat-card\"><span class=\"slop-stat-value slop-gradient-text\">{{stat_2_value}}</span><span class=\"slop-stat-label\">{{stat_2_label}}</span></div><div class=\"slop-stat-card\"><span class=\"slop-stat-value slop-gradient-text\">{{stat_3_value}}</span><span class=\"slop-stat-label\">{{stat_3_label}}</span></div></div></div></section>",
+      "css": ".slop-stat-card { text-align: center; padding: 1.5rem; border-radius: 14px; background: var(--slop-surface); border: 1px solid var(--slop-border); } .slop-stat-value { display: block; font-family: var(--slop-font-heading); font-size: 2.25rem; font-weight: 800; } .slop-stat-label { color: var(--slop-muted); font-size: 0.9rem; }"
+    },
+    {
+      "id": "five-star-testimonials",
+      "name": "5-Star Testimonial Cards",
+      "category": "layout",
+      "slop_weight": 8,
+      "min_level": 4,
+      "slot": "testimonials",
+      "html": "<section id=\"testimonials\" class=\"slop-section slop-testimonials\"><div class=\"slop-container\"><h2 class=\"slop-section-title\">Loved by Innovators Worldwide</h2><div class=\"slop-grid-3\"><blockquote class=\"slop-testimonial-card\"><div class=\"slop-stars\" aria-label=\"5 out of 5 stars\">★★★★★</div><p>&ldquo;{{testimonial_0_quote}}&rdquo;</p><footer><strong>{{testimonial_0_author}}</strong><span>{{testimonial_0_role}}</span></footer></blockquote><blockquote class=\"slop-testimonial-card\"><div class=\"slop-stars\" aria-label=\"5 out of 5 stars\">★★★★★</div><p>&ldquo;{{testimonial_1_quote}}&rdquo;</p><footer><strong>{{testimonial_1_author}}</strong><span>{{testimonial_1_role}}</span></footer></blockquote><blockquote class=\"slop-testimonial-card\"><div class=\"slop-stars\" aria-label=\"5 out of 5 stars\">★★★★★</div><p>&ldquo;{{testimonial_2_quote}}&rdquo;</p><footer><strong>{{testimonial_2_author}}</strong><span>{{testimonial_2_role}}</span></footer></blockquote></div></div></section>",
+      "css": ".slop-testimonial-card { margin: 0; padding: 1.75rem; border-radius: 16px; background: var(--slop-surface); backdrop-filter: blur(12px); border: 1px solid var(--slop-border); display: flex; flex-direction: column; gap: 1rem; } .slop-stars { color: #facc15; letter-spacing: 0.1em; } .slop-testimonial-card footer { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.875rem; color: var(--slop-muted); } .slop-testimonial-card strong { color: var(--slop-fg); }"
+    },
+    {
+      "id": "neon-newsletter-cta",
+      "name": "Neon Waitlist CTA Box",
+      "category": "layout",
+      "slop_weight": 8,
+      "min_level": 4,
+      "slot": "cta",
+      "html": "<section id=\"cta\" class=\"slop-section slop-cta\"><div class=\"slop-container\"><div class=\"slop-cta-box\"><h2 class=\"slop-gradient-text\">Ready to Transform {{brand}}?</h2><p>{{subhead}}</p><form class=\"slop-cta-form\" action=\"#\" method=\"post\"><input type=\"email\" placeholder=\"Enter your work email\" aria-label=\"Work email\" required><button type=\"submit\" class=\"slop-btn slop-btn-primary slop-neon-btn\">{{primary_cta}}</button></form></div></div></section>",
+      "css": ".slop-cta-box { text-align: center; padding: clamp(2.5rem, 5vw, 4rem); border-radius: 20px; background: var(--slop-surface); border: 1px solid var(--slop-border); box-shadow: 0 0 36px var(--slop-glow); } .slop-cta-form { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 1.5rem; } .slop-cta-form input { min-width: min(280px, 100%); }"
+    }
+  ],
+  "animations": [
+    "float",
+    "pulse",
+    "blob-drift",
+    "gradient-shift",
+    "hover-scale",
+    "neon-glow-pulse"
+  ]
+}

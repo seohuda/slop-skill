@@ -1,0 +1,82 @@
+[
+  {
+    "id": "inter-poppins",
+    "name": "Poppins & Inter",
+    "category": "typography",
+    "slop_weight": 6,
+    "min_level": 1,
+    "heading": "Poppins",
+    "body": "Inter",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+  },
+  {
+    "id": "plus-jakarta-inter",
+    "name": "Plus Jakarta Sans & Inter",
+    "category": "typography",
+    "slop_weight": 5,
+    "min_level": 1,
+    "heading": "Plus Jakarta Sans",
+    "body": "Inter",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+  },
+  {
+    "id": "dm-sans-inter",
+    "name": "DM Sans & Inter",
+    "category": "typography",
+    "slop_weight": 4,
+    "min_level": 1,
+    "heading": "DM Sans",
+    "body": "Inter",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+  },
+  {
+    "id": "space-grotesk-inter",
+    "name": "Space Grotesk & Inter",
+    "category": "typography",
+    "slop_weight": 7,
+    "min_level": 2,
+    "heading": "Space Grotesk",
+    "body": "Inter",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"
+  },
+  {
+    "id": "outfit-dm-sans",
+    "name": "Outfit & DM Sans",
+    "category": "typography",
+    "slop_weight": 7,
+    "min_level": 2,
+    "heading": "Outfit",
+    "body": "DM Sans",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+  },
+  {
+    "id": "montserrat-inter",
+    "name": "Montserrat & Inter",
+    "category": "typography",
+    "slop_weight": 8,
+    "min_level": 3,
+    "heading": "Montserrat",
+    "body": "Inter",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap"
+  },
+  {
+    "id": "sora-plus-jakarta",
+    "name": "Sora & Plus Jakarta Sans",
+    "category": "typography",
+    "slop_weight": 8,
+    "min_level": 3,
+    "heading": "Sora",
+    "body": "Plus Jakarta Sans",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap"
+  },
+  {
+    "id": "syne-plus-jakarta",
+    "name": "Syne & Plus Jakarta Sans",
+    "category": "typography",
+    "slop_weight": 9,
+    "min_level": 4,
+    "heading": "Syne",
+    "body": "Plus Jakarta Sans",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
+  }
+]

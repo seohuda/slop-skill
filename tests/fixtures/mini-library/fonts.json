@@ -1,0 +1,52 @@
+[
+  {
+    "id": "inter-clean",
+    "name": "Inter Clean",
+    "category": "typography",
+    "slop_weight": 3,
+    "min_level": 1,
+    "heading": "Inter",
+    "body": "Inter",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "plus-jakarta-inter",
+    "name": "Plus Jakarta Sans & Inter",
+    "category": "typography",
+    "slop_weight": 5,
+    "min_level": 2,
+    "heading": "Plus Jakarta Sans",
+    "body": "Inter",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+  },
+  {
+    "id": "inter-poppins",
+    "name": "Inter & Poppins",
+    "category": "typography",
+    "slop_weight": 7,
+    "min_level": 3,
+    "heading": "Poppins",
+    "body": "Inter",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+  },
+  {
+    "id": "space-grotesk-inter",
+    "name": "Space Grotesk & Inter",
+    "category": "typography",
+    "slop_weight": 8,
+    "min_level": 4,
+    "heading": "Space Grotesk",
+    "body": "Inter",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap"
+  },
+  {
+    "id": "outfit-sora",
+    "name": "Outfit & Sora",
+    "category": "typography",
+    "slop_weight": 10,
+    "min_level": 5,
+    "heading": "Outfit",
+    "body": "Sora",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&family=Sora:wght@400;500;600&display=swap"
+  }
+]

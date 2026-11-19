@@ -1,0 +1,102 @@
+{
+  "hero_headlines": [
+    "Build Modern Software Faster",
+    "Streamline Your Team Operations",
+    "Revolutionize Your Workflow with Next-Gen AI",
+    "Supercharge Productivity at Hyperscale",
+    "Unlock Autonomous Intelligence for Every Team",
+    "Elevate Your Digital Experience Seamlessly",
+    "Transform Ideas into Reality 10x Faster",
+    "The Quantum Leap in AI-Powered Automation"
+  ],
+  "subheads": [
+    "Simple tools designed to keep your engineering projects organized and reliable.",
+    "Connect your favorite services and collaborate clearly across every milestone.",
+    "Unlock the power of autonomous intelligence and seamlessly elevate your experience to the next level.",
+    "Supercharge your entire organization with next-gen AI pipelines built for instant scale.",
+    "Harness seamless cloud automation that transforms complex workflows in seconds.",
+    "Empower your team with intelligent insights and effortless real-time collaboration.",
+    "Experience hyper-personalized workflows engineered to disrupt legacy bottlenecks.",
+    "Deploy autonomous agents that work around the clock to accelerate growth."
+  ],
+  "ctas": [
+    "Get Started",
+    "Learn More",
+    "Get Started Free",
+    "Watch Demo",
+    "Launch Now",
+    "Start Free Trial",
+    "Book a Live Demo",
+    "Unlock AI Access"
+  ],
+  "feature_titles": [
+    "Structured Project Boards",
+    "Real-Time Team Sync",
+    "Lightning-Fast AI Automation",
+    "Seamless Cloud Integration",
+    "Autonomous Smart Analytics",
+    "Instant One-Click Deployment",
+    "Hyper-Scale Neural Workflows",
+    "Zero-Friction Enterprise Security"
+  ],
+  "testimonials": [
+    {
+      "quote": "Clean interface and predictable setup made onboarding our team straightforward.",
+      "author": "Jordan Patel",
+      "role": "Engineering Manager, Northstar",
+      "rating": 4
+    },
+    {
+      "quote": "This platform completely revolutionized our workflow and supercharged our team's productivity.",
+      "author": "Sarah Chen",
+      "role": "VP of Engineering, TechFlow",
+      "rating": 5
+    },
+    {
+      "quote": "We unlocked 10x faster delivery within the very first week of switching.",
+      "author": "Marcus Vance",
+      "role": "CTO, QuantumScale",
+      "rating": 5
+    },
+    {
+      "quote": "Seamless AI automation saved our ops team hundreds of hours every single month.",
+      "author": "Elena Rostova",
+      "role": "Head of Product, Lumina AI",
+      "rating": 5
+    },
+    {
+      "quote": "The most intuitive next-gen platform we have ever adopted across our organization.",
+      "author": "David Kim",
+      "role": "Founder, HyperLoop Labs",
+      "rating": 5
+    },
+    {
+      "quote": "Our metrics skyrocketed overnight after deploying their autonomous workflow engine.",
+      "author": "Priya Nair",
+      "role": "Chief Growth Officer, VelocityCloud",
+      "rating": 5
+    },
+    {
+      "quote": "Truly a game-changer that elevated our customer experience beyond expectations.",
+      "author": "Lucas Meyer",
+      "role": "Director of AI, Zenith Corp",
+      "rating": 5
+    },
+    {
+      "quote": "Reliable performance paired with effortless integrations our developers actually enjoy.",
+      "author": "Hannah Brooks",
+      "role": "Staff Architect, CloudBridge",
+      "rating": 4
+    }
+  ],
+  "fake_stats": [
+    { "value": "10K+", "label": "Active Users" },
+    { "value": "99.9%", "label": "Uptime SLA" },
+    { "value": "500M+", "label": "Tasks Automated" },
+    { "value": "4.9/5", "label": "Customer Rating" },
+    { "value": "10x", "label": "Faster Delivery" },
+    { "value": "150+", "label": "Global Integrations" },
+    { "value": "24/7", "label": "Autonomous Support" },
+    { "value": "98%", "label": "Customer Retention" }
+  ]
+}

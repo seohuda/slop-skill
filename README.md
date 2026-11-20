@@ -1,5 +1,9 @@
 # slop-skill
 
+<p>
+  <a href="README.ko.md"><img src="https://img.shields.io/badge/README-Korean%20(%ED%95%9C%EA%B5%AD%EC%96%B4)-8B5CF6?style=for-the-badge" alt="한국어 README 보기"></a>
+</p>
+
 > **Precision-Engineered Statistical Mediocrity.**  
 > A Swiss-modernist design system for manufacturing calibrated, reproducible AI slop on demand.
 
